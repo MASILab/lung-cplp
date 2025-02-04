@@ -1,10 +1,7 @@
 # bespoke ignore 
 data/
 *.pth
-configs/
 env*
-figures/
-runs/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

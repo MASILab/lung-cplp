@@ -1,0 +1,36 @@
+data:
+  dataset: 'Imgft_Lang_Dataset'
+  cohort: 'NLST.train'
+  img_dim: 512
+  expr_dim: 1024
+  date_format: "%Y%m%d"
+  val_split: 0.2
+  label: "cancer_year1_unconfirmed"
+  cache_embedding: "var_embeddings"
+
+logging:
+  log_every_n_steps: 10
+  val_every_n_epochs: 4
+  verbosity: 0
+
+model:
+  model_name: 'clip_classifier'
+  embed_dim: 256
+  transformer_width: 256
+  slen: 3
+  classifier_depth: 3
+  encoder_ckpt: "./model_best-epoch=9002-loss=0.022.pth"
+  
+trainer:
+  trainer_name: 'FinetuneCLIPTrainer'
+  batch_size: 2401 # 6500
+  lr: !!float 1e-3
+  encoder_lr: !!float 5e-4
+  epochs: 2000
+  save_period: 100
+  monitor: 'min val/loss'
+  resume: null
+  warmup: 40
+  n_gpu: 1
+  regression: False
+  predict_as_onehot: True
