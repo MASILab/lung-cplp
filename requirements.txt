@@ -1,0 +1,15 @@
+einops
+pandas
+scikit-learn
+nibabel
+wandb
+sentence_transformers
+tqdm
+python-dotenv
+
+git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup
+
+# local directories
+-e ./lung-cplp
+
+
