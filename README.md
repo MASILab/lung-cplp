@@ -1,14 +1,18 @@
 # Contrastive Patient-level Pretraining Enables Longitudinal and Multimodal Fusion for Lung Cancer Risk Prediction
 
 [[Paper]](https://openreview.net/pdf?id=cyHmr0DIjM)
-[[Pretrained Models]]()
+
+Pretrained Model:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14816443.svg)](https://doi.org/10.5281/zenodo.14816443)
+
+
 
 ## Setup
 Dependencies: 
 * Pytorch 2.6.0
 * packages in `requirements.txt`
 * an editable installation of the project itself: `pip install -e ./lung-cplp`
-* Download pretrained CLIP model if not training from scratch
+* Download pretrained CLIP model if not training from scratch.
 * Reproducing paper results requires public data from the [NLST](https://www.cancerimagingarchive.net/collection/nlst/)
 * Feature vectors from [sybil](https://github.com/reginabarzilaygroup/Sybil)
 
